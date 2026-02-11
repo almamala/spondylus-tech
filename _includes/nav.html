@@ -1,0 +1,13 @@
+<nav class="tab-nav">
+  {% for item in site.data.nav %}
+  {% if page.lang == 'es' %}
+    {% assign nav_url = item.url_es %}
+  {% else %}
+    {% assign nav_url = item.url_en %}
+  {% endif %}
+  <a href="{{ nav_url | relative_url }}" class="nav-tile{% if page.page_id == item.page_id %} active{% endif %}">
+    <span class="nav-title">{{ item.title }}</span>
+    <span class="nav-subtitle">{{ item.subtitle }}</span>
+  </a>
+  {% endfor %}
+</nav>

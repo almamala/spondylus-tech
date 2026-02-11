@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  {% include head.html %}
+</head>
+<body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+  {% include lang-bar.html %}
+  {{ content }}
+  {% include nav.html %}
+  {% include contact-bar.html %}
+</body>
+</html>

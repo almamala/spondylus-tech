@@ -1,0 +1,12 @@
+title: Brisas del Mar
+description: Oceanfront living in Manglaralto, Ecuador
+baseurl: ""
+url: ""
+
+# Build
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules

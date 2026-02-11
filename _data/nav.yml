@@ -1,0 +1,23 @@
+- title: A Great Place to Live
+  subtitle: Move-in ready oceanfront
+  page_id: index
+  url_en: /
+  url_es: /es/
+
+- title: Live Here & Earn
+  subtitle: Home + rental income
+  page_id: hybrid
+  url_en: /hybrid.html
+  url_es: /es/hybrid.html
+
+- title: Investor / Developer
+  subtitle: Development potential
+  page_id: investor
+  url_en: /investor.html
+  url_es: /es/investor.html
+
+- title: The Area & Lifestyle
+  subtitle: Manglaralto & beyond
+  page_id: lifestyle
+  url_en: /lifestyle.html
+  url_es: /es/lifestyle.html

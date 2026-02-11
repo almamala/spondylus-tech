@@ -19,3 +19,10 @@
 # Logs and databases
 *.log
 *.sqlite
+
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
