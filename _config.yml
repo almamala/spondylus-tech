@@ -1,7 +1,7 @@
 title: Brisas del Mar
 description: Oceanfront living in Manglaralto, Ecuador
-baseurl: "/spondylus-tech"
-url: ""
+baseurl: ""
+url: "https://spondylus.tech"
 
 # Build
 markdown: kramdown
