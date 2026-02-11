@@ -5,8 +5,17 @@
 </head>
 <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
   {% include lang-bar.html %}
-  {{ content }}
+  <section class="hero">
+    <div class="hero-image">
+      <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt }}">
+    </div>
+    <div class="hero-content">
+      <h1>{{ page.hero_title }}</h1>
+      <p class="tagline">{{ page.hero_tagline }}</p>
+    </div>
+  </section>
   {% include nav.html %}
+  {{ content }}
   {% include contact-bar.html %}
 </body>
 </html>
