@@ -1,0 +1,21 @@
+# macOS Specific Files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+._*
+.Spotlight-V100
+.Trashes
+
+# IDE / Editor Settings
+.vscode/
+.idea/
+*.swp
+*.sublime-project
+*.sublime-workspace
+
+# Logs and databases
+*.log
+*.sqlite
