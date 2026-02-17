@@ -55,13 +55,36 @@ figcaption {
   height: 36px;
   background: #1a1a2e;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 0 16px;
   z-index: 100;
 }
 
-.lang-bar a {
+.lang-bar .transparency-link {
+  color: #aaa;
+  text-decoration: none;
+  padding: 4px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.lang-bar .transparency-link.active {
+  color: #fff;
+  background: #3a86ff;
+}
+
+.lang-bar .transparency-link:hover:not(.active) {
+  color: #fff;
+}
+
+.lang-bar .lang-switcher {
+  display: flex;
+  gap: 4px;
+}
+
+.lang-bar .lang-switcher a {
   color: #aaa;
   text-decoration: none;
   padding: 4px 12px;
@@ -69,12 +92,12 @@ figcaption {
   border-radius: 4px;
 }
 
-.lang-bar a.active {
+.lang-bar .lang-switcher a.active {
   color: #fff;
   background: #3a86ff;
 }
 
-.lang-bar a:hover:not(.active) {
+.lang-bar .lang-switcher a:hover:not(.active) {
   color: #fff;
 }
 
@@ -329,7 +352,7 @@ figcaption {
 .specs-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 30px 0;
+  margin: 5px 0;
 }
 
 .specs-table th,
@@ -386,7 +409,7 @@ figcaption {
 
 /* --- Specs Section (titled table block, e.g. "What You Get") --- */
 .specs-section {
-  margin-top: 60px;
+  margin-top: 10px;
 }
 
 .specs-section h2 {
@@ -524,6 +547,43 @@ figcaption {
   vertical-align: top;
 }
 
+/* --- transparency-transparencia.html ---
+   Requires <body class="page-transparency"> on that page. */
+
+/* Mobile jump navigation - only visible on mobile */
+.mobile-jump-nav {
+  display: none;
+}
+
+.bilingual-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.bilingual-column {
+  padding: 1rem;
+}
+
+.bilingual-column h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bilingual-column h3 {
+  margin-top: 1.5rem;
+  color: #4e668d;
+}
+
+.bilingual-column p {
+  color: #555;
+  line-height: 1.6;
+}
+
 
 /* ============ 11. RESPONSIVE — MOBILE ============ */
 @media (max-width: 900px) {
@@ -617,6 +677,43 @@ figcaption {
 
   .subpage-header {
     padding: 30px 16px;
+  }
+
+  /* Transparency page mobile adjustments */
+  .bilingual-container {
+    grid-template-columns: 1fr;
+    padding: 1rem 0.5rem;
+  }
+
+  .mobile-jump-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #4e668d;
+    border-radius: 8px;
+    margin: 1rem auto;
+    max-width: 500px;
+  }
+
+  .mobile-jump-nav a {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    background: #3a86ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .mobile-jump-nav a:hover {
+    background: #2c6fd9;
+  }
+
+  .bilingual-column {
+    scroll-margin-top: 80px;
   }
 }
 

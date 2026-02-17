@@ -26,3 +26,6 @@ _site/
 .jekyll-metadata
 .bundle/
 vendor/
+
+# Environment variables and API keys
+.env
