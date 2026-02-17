@@ -87,7 +87,7 @@ figcaption {
 /* ============ 3. HERO ============ */
 .hero {
   margin-top: 36px;
-  height: calc(100vh - 36px - 140px);
+  height: calc(75vh - 36px - 140px);
   min-height: 400px;
   position: relative;
   overflow: hidden;
@@ -529,8 +529,8 @@ figcaption {
 @media (max-width: 900px) {
 
   .hero {
-    height: calc(100vh - 36px - 160px - 50px);
-    min-height: 300px;
+    height: calc(75vh - 36px - 160px - 50px);
+    /*min-height: 300px;*/
   }
 
   /* Tab nav fixed at bottom */
