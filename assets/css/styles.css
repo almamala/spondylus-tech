@@ -62,18 +62,18 @@ figcaption {
 }
 
 .lang-bar .transparency-link {
-  color: #aaa;
+  color: #d9366f;
   text-decoration: none;
   padding: 4px 12px;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 4px;
   font-weight: 500;
 }
 
-.lang-bar .transparency-link.active {
+/* .lang-bar .transparency-link.active {
   color: #fff;
   background: #3a86ff;
-}
+} */
 
 .lang-bar .transparency-link:hover:not(.active) {
   color: #fff;
