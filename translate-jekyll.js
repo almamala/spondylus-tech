@@ -17,6 +17,7 @@
  *   --source-lang <lang>         Source language code (default: EN)
  *   --translate-fields <fields>  Comma-separated front matter fields to translate (default: title,description)
  *   --dry-run                    Show character count without translating
+ *   --skip-git-check             Skip git status check (not recommended)
  *   --api-tier <free|pro>        API tier to use (default: free)
  * 
  * Environment:
@@ -26,6 +27,7 @@
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+const { execSync } = require('child_process');
 
 // Parse command line arguments
 function parseArgs() {
@@ -37,7 +39,8 @@ function parseArgs() {
     sourceLang: 'EN',
     translateFields: ['title', 'description'],
     dryRun: false,
-    apiTier: 'free'
+    apiTier: 'free',
+    skipGitCheck: false
   };
 
   for (let i = 0; i < args.length; i++) {
@@ -65,6 +68,9 @@ function parseArgs() {
         break;
       case '--dry-run':
         config.dryRun = true;
+        break;
+      case '--skip-git-check':
+        config.skipGitCheck = true;
         break;
       case '--api-tier':
         config.apiTier = args[++i];
@@ -241,9 +247,32 @@ function countCharacters(content, frontMatterData, translateFields) {
   return total;
 }
 
+// Check git status for uncommitted changes
+function checkGitStatus() {
+  try {
+    const status = execSync('git status --porcelain', { encoding: 'utf8' });
+    
+    if (status.trim()) {
+      console.error('\n⚠️  Uncommitted changes detected.');
+      console.error('Please commit your changes before translating to preserve state.\n');
+      console.error('Run: git add . && git commit -m "your message"\n');
+      process.exit(1);
+    }
+  } catch (error) {
+    // Git not available or not a git repo - warn but continue
+    console.warn('⚠️  Unable to check git status. Make sure to save your work before translating.\n');
+  }
+}
+
 // Main execution
 async function main() {
   const config = parseArgs();
+
+  // Check git status first (unless skipped)
+  if (!config.skipGitCheck) {
+    checkGitStatus();
+  }
+
   const apiKey = getApiKey();
 
   // Read input file
