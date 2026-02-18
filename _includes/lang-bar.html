@@ -1,15 +1,23 @@
 <div class="lang-bar">
-  <a href="{{ site.baseurl }}/transparency-transparencia.html"
-     class="transparency-link{% if page.page_id == 'transparency-transparencia' %} active{% endif %}"
-     title="Transparency / Transparencia">Disclosures / Transparencia</a>
+  {% if page.lang == 'es' %}
+    <a href="{{ site.baseurl }}/es/transparencia.html"
+       class="transparency-link{% if page.page_id == 'transparencia' %} active{% endif %}"
+       title="Transparencia">Transparencia</a>
+  {% else %}
+    <a href="{{ site.baseurl }}/transparency.html"
+       class="transparency-link{% if page.page_id == 'transparency' %} active{% endif %}"
+       title="Transparency">Transparency</a>
+  {% endif %}
   <div class="lang-switcher">
     {% assign es_path = page.page_id | append: '.html' %}
     {% if page.page_id == 'index' %}{% assign es_path = '' %}{% endif %}
+    {% if page.page_id == 'transparency' %}{% assign es_path = 'transparencia.html' %}{% endif %}
     <a href="{{ site.baseurl }}/es/{{ es_path }}"
        title="Español"
        {% if page.lang == 'es' %}class="active"{% endif %}>ES</a>
     {% assign en_path = page.page_id | append: '.html' %}
     {% if page.page_id == 'index' %}{% assign en_path = '' %}{% endif %}
+    {% if page.page_id == 'transparencia' %}{% assign en_path = 'transparency.html' %}{% endif %}
     <a href="{{ site.baseurl }}/{{ en_path }}"
        title="English"
        {% if page.lang == 'en' %}class="active"{% endif %}>EN</a>
