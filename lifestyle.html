@@ -6,6 +6,63 @@ page_id: lifestyle
 lang: en
 ---
 
+<style>
+  /* =============================================
+     GALLERY: full-width rows with figcaptions
+     2-col on desktop, stacks to 1-col on mobile
+  ============================================= */
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .photo-gallery figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo-gallery figure img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+  }
+
+  .photo-gallery figcaption {
+    font-size: 0.82rem;
+    color: #666;
+    font-style: italic;
+    padding: 0.4rem 0.2rem 0;
+    line-height: 1.4;
+  }
+
+  /* Single wide gallery image (solo shots that deserve full width) */
+  .photo-gallery.solo {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+  }
+
+  .photo-gallery.solo figure img {
+    height: 380px;
+  }
+
+  @media (max-width: 600px) {
+    .photo-gallery {
+      grid-template-columns: 1fr;
+    }
+    .photo-gallery figure img {
+      height: 220px;
+    }
+    .photo-gallery.solo figure img {
+      height: 240px;
+    }
+  }
+</style>
+
 <!-- Content -->
 <main class="content">
 <section class="intro">
@@ -13,7 +70,7 @@ lang: en
     Life in Manglaralto and the surrounding corridor offers a
     <strong>relaxed, surf-oriented coastal lifestyle</strong> with strong
     community ties, easy access to nature, and a growing
-    expat/digital-nomad presence.
+    expat and digital-nomad presence.
   </p>
 </section>
 
@@ -21,79 +78,70 @@ lang: en
 <!-- MANGLARALTO -->
 <!-- ========================= -->
 <section class="content">
-  <h2>Manglaralto (where the property is)</h2>
+  <h2>Manglaralto — where the property is</h2>
 
-  <!-- Opening town scene -->
-  <section class="content-block">
-    <figure class="image">
+  <section class="text-section">
+    <h3>A place where time stands still</h3>
+    <p>
+      First, a small geography note that trips people up: Manglaralto is both
+      a town <em>and</em> the name of the larger parroquia (parish) that
+      includes Olón and Montañita — and that parroquia sits within the
+      provincia of Santa Elena. Web searches often blur these together, so
+      when you read that "Manglaralto" has a surf scene or a party vibe,
+      they're usually talking about the broader area. The town itself is a
+      different story.
+    </p>
+    <p>
+      The town of Manglaralto is smaller, quieter, and genuinely family-oriented.
+      It's a mix of working-class coastal families, fishermen, and an increasing
+      number of long-term expats and remote workers who found it and decided
+      to stay. There's a strong sense of community here — residents are active
+      in turtle conservation, local festivals, and neighborhood projects — and
+      you feel that pretty quickly after arriving.
+    </p>
+    <p>
+      It's not a resort town vibe. It's a real working coastal town that
+      happens to be beautiful, and that distinction matters a lot if you're
+      thinking about actually living somewhere versus just visiting.
+    </p>
+  </section>
+
+  <!-- Town square images -->
+  <div class="photo-gallery">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/manglaralto-town-square-park-view-1.png' | relative_url }}"
         alt="Manglaralto town square park view"
       />
+      <figcaption>The town square — where everyday life unfolds in the evenings.</figcaption>
     </figure>
-    <div class="text">
-      <h3>A place where time stands still</h3>
-      <p>
-        Manglaralto is a smaller but up-and-coming family-oriented town WITHIN
-        the parroquia of Manglaralto that includes Olón and Montañita, which is
-        itself within the provincia of Santa Elena (this confuses people and web
-        search sometimes). Manglaralto is a place where time stands still.
-      </p>
-      <p>
-        A mix of working-class coastal families, fishermen, and an increasing
-        number of long-term expats and remote workers. There's a strong sense of
-        community and environmental awareness, with residents active in turtle
-        conservation, local festivals, and neighborhood projects.
-      </p>
-    </div>
-  </section>
-
-  <!-- Town square + church -->
-  <section class="content-block">
-    <figure class="image">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/manglaralto-town-square-park-2.png' | relative_url }}"
         alt="Manglaralto town square park"
       />
+      <figcaption>Kids playing, neighbors catching up, festivals and casual walks — all here.</figcaption>
     </figure>
-    <div class="text">
-      <h4>Community life happens outdoors</h4>
-      <p>
-        The town square and surrounding parks are where everyday life unfolds —
-        kids playing, neighbors catching up, festivals, and casual evening
-        walks. It's not a resort town vibe — it's a real working coastal town
-        that happens to be beautiful.
-      </p>
-    </div>
-  </section>
-
-  <section class="content-block">
-    <figure class="image">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/manglaralto-town-square-iglesia.png' | relative_url }}"
         alt="Manglaralto church"
       />
+      <figcaption>The local iglesia at the heart of Manglaralto's cultural identity.</figcaption>
     </figure>
-    <div class="text">
-      <h4>Faith, tradition, and continuity</h4>
-      <p>
-        The local iglesia sits at the heart of Manglaralto's cultural identity.
-        Residents value tradition and community bonds forged through
-        generations, but the town is also welcoming and relaxed with newcomers.
-      </p>
-    </div>
-  </section>
+  </div>
 
   <!-- ========================= -->
   <!-- BEACH & VIBE -->
   <!-- ========================= -->
   <section class="text-section">
-    <h3>Beach & vibe</h3>
+    <h3>The beach</h3>
     <p>
-      The beachfront is calm and unpretentious, with cleaner stretches than
-      heavily touristed areas. The beaches are long and relatively flat, good
-      for walking and swimming, and excellent for early-morning or sunset walks
-      with minimal crowds.
+      The beachfront here is calm and unpretentious. Cleaner stretches than
+      you'll find in more heavily touristed areas, long and relatively flat,
+      good for swimming, and excellent for early-morning or sunset walks when
+      it's mostly just locals out. You're not competing for space or dodging
+      hawkers. It's just a beach.
     </p>
   </section>
 
@@ -101,483 +149,515 @@ lang: en
   <!-- FOOD, GROCERIES & DAILY LIFE -->
   <!-- ========================= -->
   <section class="text-section">
-    <h3>Food, groceries & daily living</h3>
+    <h3>Food, groceries & daily life</h3>
     <p>
       One of the things that surprises people most about Manglaralto is how
-      functional everyday life is without feeling commercialized. You don't
-      need to leave town for basics — and you also don't feel like you're living
-      in a strip mall.
+      functional everyday life is here — without the commercialized, strip-mall
+      feeling that can creep into expat-heavy towns. You genuinely don't need
+      to leave for the basics, and there's enough variety that it doesn't feel
+      like roughing it.
+    </p>
+    <p>
+      Markets sell fresh produce, seafood, and baked goods. A Tuti grocery
+      store opened in town and covers most day-to-day needs. Larger
+      supermarkets — TIA in Montañita ($0.60 by bus), and bigger options in
+      Santa Elena and Salinas — aren't far for anything specialized.
     </p>
   </section>
 
-  <section class="content-block">
-    <figure class="image">
+  <!-- Grocery gallery -->
+  <div class="photo-gallery">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/manglaralto-grocery-options-fresh-vegetables-and-general-store.png' | relative_url }}"
         alt="Fresh vegetables and general store"
       />
+      <figcaption>Fresh produce and general goods — the market staples.</figcaption>
     </figure>
-    <div class="text">
-      <h4>Weekly markets & produce</h4>
-      <p>
-        Markets in Manglaralto proper sell fresh produce, seafood, and baked
-        goods. A new Tuti grocery store is open now in town, and larger
-        supermarkets are reachable by bus or car in Santa Elena or Salinas.
-      </p>
-    </div>
-  </section>
-
-  <section class="content-block">
-    <figure class="image">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/manglaralto-grocery-options-piedra-carnisariato.png' | relative_url }}"
         alt="Piedra Carnisariato butcher shop"
       />
+      <figcaption>Piedra Carnisariato — quality local meats without city prices.</figcaption>
     </figure>
-    <div class="text">
-      <h4>Quality meat & provisions</h4>
-      <p>
-        Specialized shops like Piedra Carnisariato provide fresh, quality meats
-        and local products. It's easy to eat well here without paying city
-        prices.
-      </p>
-    </div>
-  </section>
-
-  <section class="content-block">
-    <figure class="image">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/manglaralto-grocery-options-tuti.png' | relative_url }}"
         alt="Tuti grocery store"
       />
+      <figcaption>Tuti — the newer grocery option in town, convenient and well-stocked.</figcaption>
     </figure>
-    <div class="text">
-      <h4>Modern convenience when you want it</h4>
-      <p>
-        Tuti represents the newer generation of grocery shopping in
-        Manglaralto — modern, convenient, and community-focused — without
-        replacing local markets or shops.
-      </p>
-    </div>
-  </section>
-
-  <section class="content-block">
-    <figure class="image">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/manglaralto-grocery-options-high-end-wine-and-spirits.png' | relative_url }}"
         alt="Wine and spirits shop"
       />
+      <figcaption>Yes, there's a wine and spirits shop. The scene here keeps evolving.</figcaption>
     </figure>
-    <div class="text">
-      <h4>Wine, spirits & small indulgences</h4>
-      <p>
-        High-end wine and spirits shops cater to expats and visitors looking for
-        a bit of variety. The culinary scene here continues to evolve without
-        losing its local character.
-      </p>
-    </div>
-  </section>
+  </div>
 
   <!-- ========================= -->
   <!-- BAKERIES, CAFES & RESTAURANTS -->
   <!-- ========================= -->
   <section class="text-section">
-    <h3>Bakeries, cafés & casual dining</h3>
+    <h3>Bakeries, cafés & eating out</h3>
     <p>
-      A lot of Manglaralto life happens in small, walkable places — bakeries,
-      cafés, seafood joints, and casual restaurants where you start to
-      recognize the same faces quickly.
+      A lot of daily life in Manglaralto happens in small, walkable spots —
+      bakeries, cafés, and casual restaurants where you start recognizing the
+      same faces pretty quickly. That's either charming or claustrophobic
+      depending on your personality, but for most people who settle here, it
+      becomes one of the things they value most.
     </p>
   </section>
 
-  <section class="content-block">
-    <figure class="image">
+  <!-- Bakery gallery grouped together -->
+  <div class="photo-gallery">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/manglaralto-local-options-bakery-cafe-sweet-place.png' | relative_url }}"
         alt="Sweet Place bakery cafe"
       />
+      <figcaption>Sweet Place — morning coffee and pastries, locals and expats mixed together.</figcaption>
     </figure>
-    <div class="text">
-      <h4>Neighborhood cafés</h4>
-      <p>
-        Sweet Place and other local bakery cafés are where expats and locals
-        connect over morning coffee and fresh pastries. These casual meeting
-        spots become part of daily life.
-      </p>
-    </div>
-  </section>
-
-  <section class="content-block">
-    <figure class="image">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/manglaralto-local-options-bakery-ruta-pan-y-canela.png' | relative_url }}"
         alt="Ruta Pan y Canela bakery"
       />
+      <figcaption>Ruta Pan y Canela — fresh-baked bread and pastries daily. A real neighborhood bakery.</figcaption>
     </figure>
-    <div class="text">
-      <h4>Artisanal bakery culture</h4>
-      <p>
-        Bakeries like Ruta Pan y Canela serve fresh-baked bread and pastries
-        daily. Part of the charm of Manglaralto is these small, quality
-        establishments.
-      </p>
-    </div>
-  </section>
+  </div>
 
-  <section class="content-block">
-    <figure class="image">
+  <!-- Restaurants gallery -->
+  <div class="photo-gallery">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/manglaralto-local-options-esquina-de-doma-seafood-restaurant.png' | relative_url }}"
         alt="Esquina de Doma seafood restaurant"
       />
+      <figcaption>Esquina de Doma — fresh-caught seafood, the kind that's hard to find elsewhere.</figcaption>
     </figure>
-    <div class="text">
-      <h4>Fresh seafood dining</h4>
-      <p>
-        Esquina de Doma and other local restaurants serve fresh-caught seafood.
-        Eating where fishermen sell their daily catch means incredible flavor
-        and value.
-      </p>
-    </div>
-  </section>
-
-  <section class="content-block">
-    <figure class="image">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/manglaralto-restaurants-laurel.png' | relative_url }}"
         alt="Laurel restaurant"
       />
+      <figcaption>Laurel — quality meals in a relaxed, unhurried setting.</figcaption>
     </figure>
-    <div class="text">
-      <h4>Low-key variety</h4>
-      <p>
-        Restaurants like Laurel offer quality meals in a relaxed setting. The
-        dining scene reflects both local tradition and growing international
-        influences.
-      </p>
-    </div>
-  </section>
+  </div>
 
   <!-- ========================= -->
   <!-- PRACTICAL LIVING -->
   <!-- ========================= -->
   <section class="text-section">
-    <h3>Practical living in Manglaralto</h3>
+    <h3>The practical stuff</h3>
+    <p>
+      This is the part that matters if you're thinking about actually living
+      here — not just visiting.
+    </p>
   </section>
 
   <table class="specs-table">
     <tr>
       <th>Healthcare</th>
       <td>
-        Manglaralto has a local health center offering basic care, vaccinations,
-        and minor-illness treatment, plus a few private clinics for lab tests,
-        X-rays, and ultrasounds. For serious or specialized care, residents
-        typically travel to hospitals in La Libertad/Salinas or Guayaquil.
+        There's a local health center in town for basic care, vaccinations,
+        and minor illnesses, plus a few private clinics that handle lab tests,
+        X-rays, and ultrasounds. For anything serious or specialized, you're
+        looking at La Libertad, Salinas, or Guayaquil — none of them are an
+        unreasonable distance away.
       </td>
     </tr>
     <tr>
       <th>Internet</th>
       <td>
-        With multiple options and fiber optic available, internet here in town
-        has been surprisingly reliable. For occasional power outages, buy a UPS
-        backup power system for your router and you should be fine. When choosing
-        a package, look at the minimum speed guaranteed, not the max or you will
-        be arguing with the installer.
+        Fiber optic is available in town and has been genuinely reliable by
+        coastal Ecuador standards. For the occasional power outage, pick up a
+        UPS backup for your router and you're set. One practical tip: when
+        you're choosing a plan, look at the minimum guaranteed speed, not the
+        advertised max — otherwise you'll be having an unpleasant conversation
+        with the installer on day one.
       </td>
     </tr>
     <tr>
       <th>Getting around</th>
       <td>
-        A car or motorcycle can be convenient for exploring but buses and taxis
-        often become preferable. Many of us have chosen to forgo the nuisance of
-        car ownership since a taxi to Olón costs a couple bucks if you want to go
-        out for dinner. If you need groceries not available in town, $1.50 will
-        get you to the TIA grocery store in Montañita. Buses from Santa Elena
-        terminal to Manglaralto cost about $1.75 and take roughly 1 hour. A bus
-        to Montañita is $0.60 and they pass by often. There are two taxi stations
-        in town — you can send a WhatsApp and they will pick you up or walk the
-        few blocks and grab one.
+        A car or motorbike can be handy for exploring the region, but a lot of
+        long-term residents end up preferring taxis and buses for daily life.
+        A taxi to Olón for dinner is a couple dollars. A bus to Montañita is
+        $0.60 and they run frequently. The bus from Santa Elena terminal to
+        Manglaralto costs about $1.75 and takes roughly an hour. There are two
+        taxi stations in town — send a WhatsApp and they'll come to you, or
+        walk a few blocks and grab one directly. Car ownership starts to feel
+        more like a nuisance than a convenience pretty quickly.
       </td>
     </tr>
     <tr>
       <th>Safety</th>
       <td>
         Manglaralto is considered relatively safe compared to larger Ecuadorian
-        cities, with low violent-crime rates but occasional petty theft
-        (pickpocketing, vehicle break-ins). You will often read online that the
-        "coast" is super dangerous but that is lumping us in with cities like
-        Manta and Puerto López. The police have taken a proactive role, and
-        recent security upgrades on buses have reduced bandit-style incidents.
-        The Manglaralto–Olón–Montañita corridor is generally safer and more
-        tourist-friendly than parts of the northern coast. Standard precautions
-        advised: no valuables on the beach at night, avoid walking alone very
-        late.
+        cities — low violent-crime rates, with the usual low-level stuff to
+        watch for (pickpocketing, vehicle break-ins). You'll read online that
+        "the coast" is dangerous, but that framing lumps this area in with
+        cities like Manta and northern port towns that have real problems. It's
+        not an accurate comparison. The Manglaralto–Olón–Montañita corridor is
+        genuinely safer and more relaxed than those areas. Police have been
+        proactive, and security upgrades on buses have made a noticeable
+        difference. Standard precautions apply: don't leave valuables on the
+        beach at night, use common sense walking alone late. That's about it.
       </td>
     </tr>
   </table>
 
   <!-- ========================= -->
-  <!-- HARDWARE, GYM & DAILY SERVICES -->
+  <!-- EVERYDAY SERVICES -->
   <!-- ========================= -->
   <section class="text-section">
-    <h3>Everyday services & personal infrastructure</h3>
+    <h3>Everyday services & infrastructure</h3>
     <p>
-      Manglaralto works as a place to actually live, not just vacation. That
-      shows up in the boring-but-important stuff: hardware stores, gyms, and
-      places that make normal life easy.
+      The boring-but-important stuff: Manglaralto works as a place to actually
+      live. Hardware stores, gyms, services — the things that don't show up
+      in travel writeups but matter enormously after the first week.
     </p>
   </section>
 
-  <section class="content-block">
-    <figure class="image">
+  <div class="photo-gallery">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/manglaralto-has-great-hardware-stores-omnisariato.png' | relative_url }}"
         alt="Omnisariato hardware store"
       />
+      <figcaption>Omnisariato hardware — well-stocked and genuinely useful for home maintenance.</figcaption>
     </figure>
-    <div class="text">
-      <h4>Hardware & home projects</h4>
-      <p>
-        Quality hardware stores like Omnisariato make home maintenance and
-        projects straightforward. Everything you need for real life is within
-        reach.
-      </p>
-    </div>
-  </section>
-
-  <section class="content-block">
-    <figure class="image">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/manglaralto-local-options-gym.png' | relative_url }}"
         alt="Local gym"
       />
+      <figcaption>A real gym in town. Between this, surfing, and beach walks, staying active isn't hard.</figcaption>
     </figure>
-    <div class="text">
-      <h4>Fitness & wellness</h4>
-      <p>
-        Local gyms and fitness options keep you active. Between surfing, beach
-        walks, and gym workouts, staying fit is easy here without overthinking
-        it.
-      </p>
-    </div>
-  </section>
+  </div>
 
   <!-- ========================= -->
-  <!-- MUSIC, EVENTS & NIGHTLIFE -->
+  <!-- MUSIC, EVENTS & CULTURE -->
   <!-- ========================= -->
   <section class="text-section">
-    <h3>Music, events & local culture</h3>
-  </section>
-
-  <section class="content-block">
-    <figure class="image">
-      <img
-        src="{{ '/assets/images/lifestyle/manglaralto-local-favorite-rock-and-blues-live-ocaso-bar.png' | relative_url }}"
-        alt="Ocaso Bar live music"
-      />
-    </figure>
-    <div class="text">
-      <h4>Ocaso Bar & live music</h4>
-      <p>
-        Ocaso Bar is a laid-back, open-air favorite in Manglaralto and often has
-        Friday night live music — local blues and rock bands doing American rock
-        covers or original work. It's a great place to meet neighbors and
-        experience the local music scene.
-      </p>
-    </div>
-  </section>
-
-  <section class="text-section">
+    <h3>Music, events & culture</h3>
     <p>
-      <strong>Manglaralto Carnival</strong> is an annual coastal celebration
-      with parades, music, dancing, and food stalls. <strong>New Year's Eve</strong>
-      here is also something to experience — communal, loud, joyful, and very
-      Ecuadorian.
+      Manglaralto has its own social life, which is easy to overlook if you
+      assume all the action is in Montañita.
+    </p>
+    <p>
+      Ocaso Bar is a laid-back, open-air spot that regularly hosts Friday
+      night live music — local blues and rock bands doing American covers or
+      original work. It's a great place to meet neighbors without committing
+      to a full night out in a louder town. The crowd is mixed — local,
+      expat, the occasional traveler who wandered over — and it's the kind of
+      place where you end up staying longer than planned.
+    </p>
+    <p>
+      Manglaralto Carnival is the big annual celebration: parades, music,
+      dancing, and food stalls that take over the town for a few days. New
+      Year's Eve here is also something to experience at least once —
+      communal, loud, joyful, and very Ecuadorian.
     </p>
   </section>
+  <div class="photo-gallery solo">
+    <figure>
+      <img
+        src="{{ '/assets/images/lifestyle/manglaralto-local-bar-favorite-rock-and-blues-live-ocaso-bar.png' | relative_url }}"
+        alt="Ocaso Bar live music"
+      />
+      <figcaption>Ocaso Bar — Friday nights, live music, open air. One of those places that becomes a habit.</figcaption>
+    </figure>
+  </div>
 
   <!-- ========================= -->
-  <!-- INTEGRATION, FISHING, WHALES -->
+  <!-- FISHING, WHALES & THE SEA -->
   <!-- ========================= -->
   <section class="text-section">
     <h3>Integration, fishing & the sea</h3>
     <p>
-      Residents are generally friendly, respectful, and tolerant of cultural
-      differences, with a strong sense of family and community. Foreigners who
-      speak some Spanish and participate in local events usually report easy
-      integration into everyday life.
+      Residents are generally friendly and tolerant of cultural differences,
+      with a strong sense of family and community that you feel in everyday
+      interactions. Foreigners who speak some Spanish and show up to local
+      events consistently report easy integration — it's not a place where
+      expats cluster separately from everyone else.
     </p>
     <p>
-      Informal shore fishing is permitted in many areas, and some local boats
-      accept paying passengers for short trips — more opportunity-based than
-      structured tour-operator experiences.
+      Shore fishing is permitted in many areas, and some local boats will take
+      paying passengers out on short trips. It's more casual and
+      opportunity-based than structured tour-operator stuff, which is honestly
+      part of the appeal.
     </p>
     <p>
-      Humpback whale season runs roughly June–October, with peak activity in
-      July–September. While the top-tier whale-watching infrastructure is
-      further north in Puerto López and Machalilla National Park, the
-      Manglaralto–Montañita corridor is close enough for easy day trips during
-      the season.
+      Humpback whale season runs roughly June through October, peaking in
+      July–September. The dedicated whale-watching infrastructure is further
+      north around Puerto López and Machalilla National Park, but the corridor
+      here is close enough for easy day trips during peak season — and locals
+      talk about it casually, the way people talk about weather. Not a packaged
+      tourism event, just something that happens every year.
     </p>
   </section>
 
-  <section class="content-block">
-    <figure class="image">
+  <div class="photo-gallery solo">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/jonathan-monck-mason-ballenita-whale-statue-salinas-la-libertad-area.jpg' | relative_url }}"
         alt="Whale statue on the Ecuadorian coast"
       />
+      <figcaption>Whale season becomes part of the rhythm here — something locals just talk about, not a heavily packaged event.</figcaption>
     </figure>
-    <div class="text">
-      <h4>Whales, migration & seasonal rhythms</h4>
-      <p>
-        Whale season becomes part of the coastal rhythm here — something locals
-        casually talk about, not a heavily packaged tourism product. You'll see
-        them offshore, hear stories, and sometimes make a day trip north when
-        conditions are right.
-      </p>
-    </div>
-  </section>
+  </div>
 </section>
 
 <!-- ========================= -->
-<!-- DOS MANGAS (SUPPORTING NATURE ESCAPE) -->
+<!-- DOS MANGAS -->
 <!-- ========================= -->
 <section class="content">
-  <h2>Dos Mangas (~15 minutes inland)</h2>
+  <h2>Dos Mangas — ~15 minutes inland</h2>
 
-  <section class="content-block">
-    <figure class="image">
+  <section class="text-section">
+    <h3>Waterfalls, forest, and howler monkeys</h3>
+    <p>
+      If you want to get off the coast for a few hours, Dos Mangas is the
+      answer. Local pickup trucks run from town to the entrance for about
+      $0.50 per person if you're willing to wait for a full load of six, or
+      $3 for immediate departure. The trailhead starts at a small
+      interpretation center — self-guided entry is $2, hiring a guide runs
+      about $22.50, and you can rent boots for $0.50 if conditions are muddy.
+      The site opens around 8:00 and closes around 15:00.
+    </p>
+    <p>
+      The trail follows a river through humid forest — medicinal plants,
+      endangered Guayacán trees, and howler monkeys up in the canopy. The
+      main waterfalls take about two hours of easy walking to reach, and the
+      water is cool, clear, and perfect for swimming. Horseback riding is
+      also available in the area for around $10 per person. Birdwatchers
+      regularly spot toucans, tanagers, and warblers along the trail.
+    </p>
+  </section>
+
+  <div class="photo-gallery solo">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/anthony-chen-toucan-i-think.jpg' | relative_url }}"
         alt="Toucan in Dos Mangas forest"
       />
+      <figcaption>The birdlife in Dos Mangas is genuinely good — toucans, tanagers, and more in two hours of easy walking.</figcaption>
     </figure>
-    <div class="text">
-      <h3>Waterfall hikes & humid forest</h3>
-      <p>
-        Dos Mangas is the inland nature escape for Manglaralto. From town, local
-        pickup trucks take you to the entrance for about $0.50 per person (if
-        you wait for 6) or $3 for immediate departure. The trail entrance is at a
-        small interpretation center. You can walk self-guided for $2 or hire a
-        guide for about $22.50. Boots can be rented for $0.50 if muddy, and the
-        site is generally open from about 8:00–15:00.
-      </p>
-      <p>
-        The path follows a river through humid forest, with medicinal plants,
-        endangered Guayacán trees, and howler monkeys above the canopy. The main
-        waterfalls are reached in about two hours of easy walking, and the water
-        is cool, clear, and perfect for swimming and relaxing.
-      </p>
-      <p>
-        Horseback riding is also available in the area, usually around $10 per
-        person for guided forest trail rides. Birdwatchers regularly see
-        toucans, tanagers, warblers, and howler monkeys.
-      </p>
-    </div>
-  </section>
+  </div>
 </section>
 
 <!-- ========================= -->
-<!-- OLÓN (SUPPORTING FOOD & COMMUNITY SCENE) -->
+<!-- OLÓN -->
 <!-- ========================= -->
 <section class="content">
-  <h2>Olón (~8 minutes north)</h2>
+  <h2>Olón — ~8 minutes north</h2>
 
-  <section class="content-block">
-    <figure class="image">
+  <section class="text-section">
+    <h3>Quiet beach town, serious food scene</h3>
+    <p>
+      Olón is about eight minutes north along the Ruta del Sol, and it punches
+      well above its size when it comes to food and community. It's quieter
+      than Montañita — a long stretch of beach, casual beachfront cabins, a
+      mix of surfers, families, and expats — and it has a surprisingly well-
+      developed dining scene that keeps getting better.
+    </p>
+    <p>
+      Sundays draw day visitors from Guayaquil, which adds a bit of energy
+      without changing the character of the place. It's still very much a
+      town where people actually live.
+    </p>
+  </section>
+
+  <!-- Olón beach / malecon -->
+  <div class="photo-gallery solo">
+    <figure>
+      <img
+        src="{{ '/assets/images/lifestyle/Olon-malecon-first-entrance-beach-and-new-viewer.png' | relative_url }}"
+        alt="Olón malecon beach entrance"
+      />
+      <figcaption>The Olón malecon — long, low-key, and genuinely pleasant to walk.</figcaption>
+    </figure>
+  </div>
+
+  <section class="text-section">
+    <h4>Bakeries & cafés</h4>
+    <p>
+      The café and bakery scene in Olón is one of its underrated strengths.
+      La Churrería is the local go-to for churros and desserts. Gomes has
+      reliable fresh bread and good coffee. Noah Cafe and Tortuga Cafe round
+      out the morning and afternoon options — the kind of spots where you
+      bring a laptop or a book and end up staying.
+    </p>
+  </section>
+
+  <!-- Olón bakery/café gallery -->
+  <div class="photo-gallery">
+    <figure>
+      <img
+        src="{{ '/assets/images/lifestyle/Olon-bakery-Dessert-La-Churreria.png' | relative_url }}"
+        alt="La Churrería bakery Olón"
+      />
+      <figcaption>La Churrería — churros, desserts, and a reliable local following.</figcaption>
+    </figure>
+    <figure>
+      <img
+        src="{{ '/assets/images/lifestyle/olon-bakery-dessert-gomes-good-bread-coffee.png' | relative_url }}"
+        alt="Gomes bakery bread and coffee"
+      />
+      <figcaption>Gomes — fresh bread and decent coffee. A morning staple for a lot of residents.</figcaption>
+    </figure>
+    <figure>
+      <img
+        src="{{ '/assets/images/lifestyle/Olon-Restaurant-Noah-cafe-coffee.png.png' | relative_url }}"
+        alt="Noah Cafe Olón"
+      />
+      <figcaption>Noah Cafe — a solid coffee spot that's become a regular stop for expats and locals alike.</figcaption>
+    </figure>
+    <figure>
+      <img
+        src="{{ '/assets/images/lifestyle/Olon-Restaurante-Coffee-Tortuga-cafe.png.png' | relative_url }}"
+        alt="Tortuga Cafe Olón"
+      />
+      <figcaption>Tortuga Cafe — relaxed, friendly, worth knowing about.</figcaption>
+    </figure>
+  </div>
+
+  <section class="text-section">
+    <h4>Restaurants</h4>
+    <p>
+      The restaurant range in Olón is genuinely broad for a town its size.
+      MOMO is known for cocktails and an international menu. South Indian
+      Restaurant is a real surprise — chicken tikka and naan that would hold
+      up anywhere. Il Pirata handles Italian. Tiki Limbo, Almacigo, Roadhouse,
+      Olón Espresso, and Picantería El Rincón Oloñense fill out the rest of
+      the options.
+    </p>
+  </section>
+
+  <!-- Olón restaurants gallery -->
+  <div class="photo-gallery">
+    <figure>
+      <img
+        src="{{ '/assets/images/lifestyle/Olon-Restaurant-South-Indian.png.png' | relative_url }}"
+        alt="South Indian Restaurant Olón"
+      />
+      <figcaption>South Indian Restaurant — one of those genuinely unexpected finds that becomes a regular.</figcaption>
+    </figure>
+    <figure>
+      <img
+        src="{{ '/assets/images/lifestyle/Olon-Restaurante-Pigro-Italian-food.png.png' | relative_url }}"
+        alt="Il Pirata Italian restaurant Olón"
+      />
+      <figcaption>Il Pirata — Italian done well, in a beach town. A good thing to have nearby.</figcaption>
+    </figure>
+    <figure>
+      <img
+        src="{{ '/assets/images/lifestyle/Olon-Restaurante-Tiki-Limbo-2.png.png' | relative_url }}"
+        alt="Tiki Limbo Olón"
+      />
+      <figcaption>Tiki Limbo — casual, good vibes, the kind of place Olón does well.</figcaption>
+    </figure>
+  </div>
+
+  <section class="text-section">
+    <h4>Community & expat life</h4>
+    <p>
+      There's a solid expat and retiree community in Olón with a real social
+      calendar — beach meetups at Jerry's Cabana on Saturdays, poker nights,
+      music events, food events, and regular cultural gatherings that mix
+      locals and foreigners well. Olón is also known for aerial dance
+      performances that have become a bit of a local signature.
+    </p>
+    <p>
+      Surfing in Olón is gentler and more forgiving than Montañita, which
+      makes it a popular place to learn. Several surf schools and board rentals
+      operate directly on the beach with instruction in both Spanish and English.
+    </p>
+  </section>
+
+  <div class="photo-gallery solo">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/miguel-andrade-guerrero--olon-fun-sign-unsplash.jpg' | relative_url }}"
         alt="Olón beach town sign"
       />
+      <figcaption>Olón — easy to underestimate until you've been there a few times.</figcaption>
     </figure>
-    <div class="text">
-      <h3>Quiet beach town, great food</h3>
-      <p>
-        About eight minutes north of Manglaralto along the Ruta del Sol, Olón is
-        a long, low-key beach settlement with a lively restaurant scene. It's
-        quieter than Montañita, with a long stretch of sand, casual beachfront
-        cabins, and a mix of surfers, families, and expats. Sundays are popular
-        with day visitors from Guayaquil.
-      </p>
-      <p>
-        Restaurants range from beachfront cabanas and seafood to pizza,
-        burgers, and higher-end options. MOMO is known for cocktails and an
-        international menu. South Indian Restaurant is a surprise standout for
-        chicken tikka and naan. La Churrería, Noah Cafe, Almacigo, Olón Espresso,
-        Roadhouse, Il Pirata, and Picantería El Rincón Oloñense round out the
-        scene.
-      </p>
-    </div>
-  </section>
-
-  <section class="text-section">
-    <p>
-      There's a strong expat and retiree community here, with weekly gatherings
-      like beach meetups at Jerry's Cabana on Saturdays, poker nights, and
-      regular music, art, and food events. Olón is also known for entertaining
-      aerial dance-style performances and community-led cultural events that
-      attract both locals and foreigners.
-    </p>
-    <p>
-      Surfing in Olón is gentler and more forgiving than Montañita, making it a
-      popular place to learn. Several surf schools and board rentals operate
-      directly on the beach and offer instruction in Spanish and English.
-    </p>
-  </section>
+  </div>
 </section>
 
 <!-- ========================= -->
-<!-- MONTAÑITA (SUPPORTING SURF + NIGHTLIFE) -->
+<!-- MONTAÑITA -->
 <!-- ========================= -->
 <section class="content">
-  <h2>Montañita (~5 minutes north)</h2>
+  <h2>Montañita — ~5 minutes north</h2>
 
-  <section class="content-block">
-    <figure class="image">
+  <section class="text-section">
+    <h3>Surf, nightlife, and five minutes away</h3>
+    <p>
+      Montañita is the well-known one — a surf-centric party town about five
+      minutes north of Manglaralto, consistently cited as one of Ecuador's top
+      surf beaches. The waves are powerful right-breakers, better suited to
+      intermediate and advanced riders, with plenty of surf schools and rental
+      shops if you're working your way up.
+    </p>
+    <p>
+      For food, Ezzios Pizza is frequently recommended and delivers. La Cadena
+      — a casual row of vendors — is the spot for breakfast smoothies,
+      pancakes, waffles, and cocktails as the day progresses.
+    </p>
+    <p>
+      Nightlife centers around Lost Beach Club, which brings in international
+      electronic DJs and has built a reputation for Monday nights in particular.
+      The rest of the walkable streets are packed with handicraft shops,
+      hostels, bars, and casual cafés — bohemian, loud late into the night,
+      but still intimate by global party-town standards.
+    </p>
+    <p>
+      The key thing about Montañita from a Manglaralto perspective: it's five
+      minutes away when you want it, and far enough that you don't have to
+      deal with it when you don't. That distance is one of the better aspects
+      of where the property sits.
+    </p>
+  </section>
+
+  <!-- Montañita gallery -->
+  <div class="photo-gallery">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/adrien-delforge-montanita-beach-view.jpg' | relative_url }}"
         alt="Montañita beach view"
       />
+      <figcaption>Montañita beach — the waves that put this stretch of coast on the map.</figcaption>
     </figure>
-    <div class="text">
-      <h3>Surf town + nightlife</h3>
-      <p>
-        Montañita is a surf-centric party town about five minutes north of
-        Manglaralto, famous for nightlife and powerful right-breaking waves.
-        It's consistently cited as one of Ecuador's top surf beaches, better
-        suited for intermediate to advanced riders, and packed with surf
-        schools and rental shops.
-      </p>
-      <p>
-        Food-wise, Ezzios Pizza is frequently recommended and delivers. El Pigro
-        offers Italian fare, and La Cadena — a row of casual vendors — serves
-        breakfast smoothies, pancakes, waffles, and cocktails later in the day.
-      </p>
-      <p>
-        Nightlife includes Lost Beach Club (international electronic DJs,
-        especially on Mondays), Cocktail Alley, Nativa Bambú, Montañita
-        Brewery, Tiki Limbo, Hello Ola, Caña Grill, and El Otro Lado.
-      </p>
-    </div>
-  </section>
+    <figure>
+      <img
+        src="{{ '/assets/images/lifestyle/Montañita-Beach-view-of-lots-of-people-on-thebeach.png.png' | relative_url }}"
+        alt="Montañita beach crowds"
+      />
+      <figcaption>Peak season Montañita — busy, energetic, and five minutes away.</figcaption>
+    </figure>
+  </div>
 
-  <section class="content-block">
-    <figure class="image">
+  <div class="photo-gallery">
+    <figure>
       <img
         src="{{ '/assets/images/lifestyle/jonathan-monck-mason-i-heart-montanita-shop.jpg' | relative_url }}"
         alt="I Heart Montañita shop"
       />
+      <figcaption>The street culture in Montañita — handicrafts, color, and a relaxed bohemian energy.</figcaption>
     </figure>
-    <div class="text">
-      <h4>Bohemian culture & street life</h4>
-      <p>
-        Montañita's walkable streets are packed with handicraft shops, hostels,
-        bars, and casual cafés. It's loud late into the night, but still
-        intimate by global party-town standards — and only minutes away when
-        you want it, far enough when you don't.
-      </p>
-    </div>
-  </section>
+    <figure>
+      <img
+        src="{{ '/assets/images/lifestyle/Montañita-local-texture-stores-old-volskvagen.png' | relative_url }}"
+        alt="Old Volkswagen in Montañita"
+      />
+      <figcaption>Montañita texture — the kind of town where a vintage VW parked on the street just fits.</figcaption>
+    </figure>
+  </div>
 </section>
 </main>
