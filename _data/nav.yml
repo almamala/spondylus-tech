@@ -1,23 +1,31 @@
-- title: A Great Place to Live
-  subtitle: Move-in ready oceanfront
+- title_en: A Great Place to Live
+  title_es: Un Gran Lugar para Vivir
+  subtitle_en: Move-in ready oceanfront
+  subtitle_es: Frente al mar, listo para habitar
   page_id: index
   url_en: /
   url_es: /es/
 
-- title: Live Here & Earn
-  subtitle: Home + rental income
+- title_en: Live Here & Earn
+  title_es: Vive Aquí y Gana
+  subtitle_en: Home + rental income
+  subtitle_es: Casa + ingresos por alquiler
   page_id: hybrid
   url_en: /hybrid.html
   url_es: /es/hybrid.html
 
-- title: Investor / Developer
-  subtitle: Development potential
+- title_en: Investor / Developer
+  title_es: Inversionista / Desarrollador
+  subtitle_en: Development potential
+  subtitle_es: Potencial de desarrollo
   page_id: investor
   url_en: /investor.html
   url_es: /es/investor.html
 
-- title: The Area & Lifestyle
-  subtitle: Manglaralto & beyond
+- title_en: The Area & Lifestyle
+  title_es: La Zona y Estilo de Vida
+  subtitle_en: Manglaralto & beyond
+  subtitle_es: Manglaralto y más allá
   page_id: lifestyle
   url_en: /lifestyle.html
   url_es: /es/lifestyle.html

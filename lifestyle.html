@@ -4,64 +4,8 @@ title: The Area & Lifestyle
 description: Manglaralto and the coastal corridor
 page_id: lifestyle
 lang: en
+body_class: page-lifestyle
 ---
-
-<style>
-  /* =============================================
-     GALLERY: full-width rows with figcaptions
-     2-col on desktop, stacks to 1-col on mobile
-  ============================================= */
-  .photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
-    margin: 1.5rem 0 2rem;
-  }
-
-  .photo-gallery figure {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .photo-gallery figure img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    display: block;
-    border-radius: 4px;
-  }
-
-  .photo-gallery figcaption {
-    font-size: 0.82rem;
-    color: #666;
-    font-style: italic;
-    padding: 0.4rem 0.2rem 0;
-    line-height: 1.4;
-  }
-
-  /* Single wide gallery image (solo shots that deserve full width) */
-  .photo-gallery.solo {
-    grid-template-columns: 1fr;
-    max-width: 680px;
-  }
-
-  .photo-gallery.solo figure img {
-    height: 380px;
-  }
-
-  @media (max-width: 600px) {
-    .photo-gallery {
-      grid-template-columns: 1fr;
-    }
-    .photo-gallery figure img {
-      height: 220px;
-    }
-    .photo-gallery.solo figure img {
-      height: 240px;
-    }
-  }
-</style>
 
 <!-- Content -->
 <main class="content">
