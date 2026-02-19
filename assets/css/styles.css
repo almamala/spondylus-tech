@@ -518,7 +518,9 @@ figcaption {
 
 /* --- lifestyle.html ---
    Requires <body class="page-lifestyle"> on that page. */
-
+.lifestyle-paragraph {
+  margin-bottom: 8px;
+}
 .page-lifestyle .intro {
   margin-bottom: 3rem;
   font-size: 1.1rem;
