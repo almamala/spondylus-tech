@@ -110,6 +110,17 @@ figcaption {
   display: none;
 }
 
+/* --- Lang-bar right group: switcher + contact buttons --- */
+.lang-bar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* --- Lang-bar contact links (desktop only, hidden on mobile) --- */
+.lang-bar-contact {
+  display: none;
+}
+
 
 /* ============ 3. HERO ============ */
 .hero {
@@ -801,6 +812,32 @@ figcaption {
 
 /* ============ 12. RESPONSIVE — DESKTOP ============ */
 @media (min-width: 901px) {
+
+  /* Lang-bar contact links — visible on desktop, separated from lang switcher */
+  .lang-bar-contact {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 10px;
+    padding-left: 14px;
+    border-left: 1px solid rgba(255,255,255,0.25);
+  }
+
+  .lang-bar-contact a {
+    color: #aaa;
+    text-decoration: none;
+    padding: 4px 20px;
+    font-size: 13px;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .lang-bar-contact a:hover {
+    color: #fff;
+    border-color: rgba(255,255,255,0.5);
+  }
+
 
   .hero {
     height: 70vh;
