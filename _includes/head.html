@@ -4,4 +4,16 @@
 {% if page.seo_description or page.description %}
 <meta name="description" content="{{ page.seo_description | default: page.description | escape }}">
 {% endif %}
+<link rel="canonical" href="https://spondylus.tech{{ page.url }}">
+{% if page.alternate_url %}
+{% if page.lang == 'es' %}
+<link rel="alternate" hreflang="es" href="https://spondylus.tech{{ page.url }}">
+<link rel="alternate" hreflang="en" href="https://spondylus.tech{{ page.alternate_url }}">
+<link rel="alternate" hreflang="x-default" href="https://spondylus.tech{{ page.alternate_url }}">
+{% else %}
+<link rel="alternate" hreflang="en" href="https://spondylus.tech{{ page.url }}">
+<link rel="alternate" hreflang="es" href="https://spondylus.tech{{ page.alternate_url }}">
+<link rel="alternate" hreflang="x-default" href="https://spondylus.tech{{ page.url }}">
+{% endif %}
+{% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
