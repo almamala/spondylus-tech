@@ -17,3 +17,18 @@
 {% endif %}
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ page.seo_title | default: page.title | escape }} — Brisas del Mar">
+<meta property="og:description" content="{{ page.seo_description | default: page.description | escape }}">
+<meta property="og:url" content="https://spondylus.tech{{ page.url }}">
+<meta property="og:image" content="https://spondylus.tech{{ page.og_image | default: '/assets/images/hero/sunset-image-power-lines-removed.png' }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Brisas del Mar">
+<meta property="og:locale" content="{% if page.lang == 'es' %}es_EC{% else %}en_US{% endif %}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.seo_title | default: page.title | escape }} — Brisas del Mar">
+<meta name="twitter:description" content="{{ page.seo_description | default: page.description | escape }}">
+<meta name="twitter:image" content="https://spondylus.tech{{ page.og_image | default: '/assets/images/hero/sunset-image-power-lines-removed.png' }}">
