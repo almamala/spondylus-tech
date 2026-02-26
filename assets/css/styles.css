@@ -247,7 +247,12 @@ figcaption {
 
 
 /* ============ 6. CONTENT ============ */
-
+h1 {
+  text-align: center;
+  line-height: 140%;
+  font-size: 28px;
+  padding-bottom: 15px;
+}
 .content {
   padding: 40px 20px;
   max-width: 900px;
