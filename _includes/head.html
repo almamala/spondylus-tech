@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ page.seo_title | default: page.title }} — Brisas del Mar</title>
+<title>{{ page.seo_title | default: page.title }}</title>
 {% if page.seo_description or page.description %}
 <meta name="description" content="{{ page.seo_description | default: page.description | escape }}">
 {% endif %}
@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 
 <!-- Open Graph -->
-<meta property="og:title" content="{{ page.seo_title | default: page.title | escape }} — Brisas del Mar">
+<meta property="og:title" content="{{ page.seo_title | default: page.title | escape }}">
 <meta property="og:description" content="{{ page.seo_description | default: page.description | escape }}">
 <meta property="og:url" content="https://spondylus.tech{{ page.url }}">
 <meta property="og:image" content="https://spondylus.tech{{ page.og_image | default: '/assets/images/hero/sunset-image-power-lines-removed.png' }}">
@@ -29,6 +29,6 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ page.seo_title | default: page.title | escape }} — Brisas del Mar">
+<meta name="twitter:title" content="{{ page.seo_title | default: page.title | escape }}">
 <meta name="twitter:description" content="{{ page.seo_description | default: page.description | escape }}">
 <meta name="twitter:image" content="https://spondylus.tech{{ page.og_image | default: '/assets/images/hero/sunset-image-power-lines-removed.png' }}">
